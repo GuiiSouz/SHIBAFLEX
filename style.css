@@ -1,0 +1,272 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #000;
+  color: white;
+  text-align: center;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #000;
+  border-bottom: 3px solid #ff4500;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+.logo-text {
+  font-size: 18px;
+  font-weight: bold;
+  color: #ff4500;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: bold;
+  border: 1px solid white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: background 0.3s, color 0.3s;
+}
+
+.nav-links a:hover {
+  background-color: #ff4500;
+  color: black;
+}
+
+.buy-button {
+  background-color: #ff4500;
+  color: white;
+  text-decoration: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+/* Conteúdo principal */
+.main-content {
+  margin-top: 50px;
+}
+
+.hero-banner {
+  width: 950px;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* WAVE separador animado */
+.wave-animation {
+  position: relative;
+  width: 100%;
+  height: 100px;
+  overflow: hidden;
+  background-color: transparent;
+}
+
+.wave-animation svg {
+  position: relative;
+  display: block;
+  width: 200%;
+  height: 100%;
+  animation: waveMove 5s linear infinite;
+}
+
+.wave-animation svg path {
+  fill: #0b0b1e;
+  opacity: 1;
+}
+
+@keyframes waveMove {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Seção ABOUT (ajuste da imagem) */
+.about-section {
+  background-color: #000000;
+  color: #eee;
+  padding: 80px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  text-align: left;
+}
+
+.text-content {
+  max-width: 600px;
+  flex: 1 1 300px;
+}
+
+.text-content h1 {
+  font-size: 3em;
+  color: #00eaff;
+  margin-bottom: 20px;
+}
+
+.text-content p {
+  font-size: 1.2em;
+  line-height: 1.7;
+  color: #ccc;
+}
+
+.text-content .highlight {
+  color: #ff00d4;
+}
+
+.image-content {
+  flex: 1 1 300px;
+  text-align: center;
+}
+
+.about-img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 0 20px #ff00d480;
+  transition: transform 0.3s ease;
+}
+
+.about-img:hover {
+  transform: scale(1.05);
+}
+
+/* Redes sociais */
+.social-icons {
+  margin-top: 20px;
+}
+
+.social-icons img {
+  width: 30px;
+  margin: 0 10px;
+}
+
+.tokenomics {
+  padding: 100px 20px;
+  background: linear-gradient(to bottom, #000007, #0b0b1e);
+  text-align: center;
+}
+
+.tokenomics-heading {
+  font-size: 3em;
+  color: #00eaff;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+  text-shadow: 0 0 10px #00eaff88;
+}
+
+.tokenomics-subheading {
+  color: #aaa;
+  font-size: 1.2em;
+  margin-bottom: 60px;
+}
+
+.tokenomics-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.tokenomics-box {
+  background: linear-gradient(145deg, #14142b, #1f1f3f);
+  border: 1px solid #222;
+  border-radius: 20px;
+  padding: 50px 20px;
+  box-shadow: 0 0 25px #00eaff25;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.tokenomics-box:hover {
+  box-shadow: 0 0 30px #00eaff99;
+  transform: scale(1.05);
+}
+
+.tokenomics-percentage {
+  font-size: 3em;
+  font-weight: bold;
+  color: #ff00c8;
+  display: block;
+  margin-bottom: 15px;
+  text-shadow: 0 0 5px #ff00c888;
+}
+
+.tokenomics-label {
+  font-size: 1.2em;
+  color: #eee;
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+
+
+.tokenomics-card h3 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  color: #00eaff;
+}
+
+.tokenomics-card p {
+  font-size: 1em;
+  color: #ddd;
+}
+
+.wave-separator-animated {
+  width: 100vw;
+  height: 150px;
+  overflow: hidden;
+  background: #000; /* ou #0b0b1e se quiser */
+  position: relative;
+  z-index: 2;
+}
+
+.wave-separator-animated svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.wave-path {
+  fill: #0b0b1e;
+  animation: waveMorph 6s ease-in-out infinite alternate;
+}
+
+@keyframes waveMorph {
+  0% {
+    d: path("M0,80 C640,0 1280,160 1920,80 L1920,150 L0,150 Z");
+  }
+  100% {
+    d: path("M0,100 C640,160 1280,0 1920,100 L1920,150 L0,150 Z");
+  }
+}
